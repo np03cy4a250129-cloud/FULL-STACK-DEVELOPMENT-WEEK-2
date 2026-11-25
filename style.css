@@ -1,0 +1,253 @@
+
+/* GENERAL STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: #234e70;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #16324f;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+}
+
+nav a:hover {
+    background-color: #3478a8;
+    border-radius: 5px;
+}
+
+/* MAIN LAYOUT */
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+main {
+    min-width: 0;
+}
+
+/* SECTIONS */
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+section h2 {
+    color: #234e70;
+    border-bottom: 2px solid #3478a8;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* IMAGES */
+figure {
+    margin: 15px 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* COURSE CARDS */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.course-card {
+    background-color: #eef4f8;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.course-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.course-card h3 {
+    color: #234e70;
+    margin: 10px 0;
+}
+
+.course-card p {
+    margin-bottom: 8px;
+}
+
+.course-card a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.course-card a:hover {
+    text-decoration: underline;
+}
+
+/* ARTICLES */
+article {
+    background-color: #f1f5f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+article h3 {
+    color: #234e70;
+    margin-bottom: 8px;
+}
+
+/* LISTS */
+section ul {
+    padding-left: 25px;
+}
+
+section li {
+    margin-bottom: 8px;
+}
+
+/* SIDEBAR */
+aside {
+    background-color: #e1ecf4;
+    padding: 20px;
+    border-radius: 8px;
+    align-self: start;
+}
+
+aside h2,
+aside h3 {
+    color: #234e70;
+    margin-bottom: 10px;
+}
+
+aside li {
+    margin-bottom: 10px;
+}
+
+/* VIDEO AND AUDIO */
+video {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+audio {
+    width: 100%;
+}
+
+/* FOOTER */
+footer {
+    background-color: #16324f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* TABLET RESPONSIVE DESIGN */
+@media screen and (max-width: 900px) {
+
+    .container {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+@media screen and (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        padding: 0 12px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    section,
+    aside {
+        padding: 15px;
+    }
+
+}
